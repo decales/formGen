@@ -1,0 +1,41 @@
+Letter:
+Current date
+Transfer
+Box range
+Branch
+Contact name
+
+DRF:
+Branch
+Contact name
+Contact phone
+Contact email
+Transfer
+Box total
+Box range
+Current date
+
+TLU:
+Current date
+Branch
+Transfer
+Contact name
+Contact email
+Box total
+Transfer start
+Transfer end
+Description
+
+ALL:
+Current date
+Branch
+Contact name
+Contact email
+Contact phone
+Description
+Transfer
+Transfer start
+Transfer end
+Box total
+Box range
+
