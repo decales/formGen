@@ -27,15 +27,17 @@ Transfer end
 Description
 
 ALL:
-Current date
-Branch
-Contact name
-Contact email
-Contact phone
 Description
 Transfer
 Transfer start
 Transfer end
 Box total
 Box range
+Branch
+
+Current date
+Contact name
+Contact email
+Contact phone
+
 
