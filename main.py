@@ -1,4 +1,5 @@
 import pandas as pd
+import functions
 
 pd.options.display.width = 0
 pd.options.display.max_rows = 1000
@@ -39,13 +40,16 @@ for i in transfers:
     transfer_query = dispose.query("Transfer == '{}'".format(i))
 
     # Extract transfer boxes, branch name, earliest year, latest year, description, and schedules
-    boxes.append(transfer_query['Box'].tolist())
+    boxes.append(functions.rangify(transfer_query['Box'].tolist()))
     branches.append(transfer_query['Branch / Board / Program'].iloc[0])
     start_years.append(min(transfer_query['Fiscal (start)'].tolist()))
     end_years.append(max(transfer_query['Fiscal (end)'].tolist()))
     descriptions.append(transfer_query['Description of Records'].iloc[0])
     schedules.append(transfer_query['Schedules'].iloc[0])
 
-# for i in range(len(transfers)):
-#     print("Transfer: {}\nBranch: {}\nBoxes: {}\nStart: {}\nEnd: {}\nDescription: {}\nSchedule: {}\n".format([transfers[i]], branches[i], boxes[i], start_years[i], end_years[i], descriptions[i], schedules[i]))
+for i in range(len(transfers)):
+    print("Transfer: {}\nBranch: {}\nBoxes: {}\nStart: {}\nEnd: {}\nDescription: {}\nSchedule: {}\n".format([transfers[i]], branches[i], boxes[i], start_years[i], end_years[i], descriptions[i], schedules[i]))
+
+
+
 
