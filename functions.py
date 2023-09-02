@@ -20,6 +20,7 @@ def getFix(l):
     match = SequenceMatcher(None, l[0], l[i]).find_longest_match()
     return l[0][match.a:match.a + match.size]
 
+
 def getDigits(l):
     digits = []
     for i in l:
@@ -27,6 +28,7 @@ def getDigits(l):
             digits.append(i)
             l.remove(i)
     return digits
+
 
 def rangify(l):
     try:
