@@ -10,10 +10,10 @@ master_path = r'input/master.xlsx'
 dataframes = data.readFiles(master_path, disposal_path)
 merge = data.mergeDataFrames(dataframes)
 
-# Separate disposable and flagged boxes
-flag = merge.query("Status != 'Active' | Disposal > 2023")
-dispose = merge.query("Status == 'Active' & Disposal <= 2023")
+# Get merge and flag data frames
+merge_df = merge[0]
+flag_df = merge[1]
 
-fields_list = data.extractFields(dispose)
+fields_list = data.extractFields(merge_df)
 
-generation.generateAll(fields_list, sys.path[0])
+generation.generateAll(fields_list, sys.path[0], flag_df)
